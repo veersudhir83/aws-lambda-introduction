@@ -13,7 +13,7 @@ mkdir setup
 
 # Move the relevant files into setup directory
 echo "Moving creds.json and function file(s) to setup dir"
-cp creds-plain.json setup/creds.json
+cp creds.json setup/creds.json
 cp sparrow_*.py setup/
 cd ./setup
 

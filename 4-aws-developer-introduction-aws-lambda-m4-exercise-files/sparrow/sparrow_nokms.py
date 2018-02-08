@@ -32,3 +32,4 @@ def send_tweet(tweet_text):
 def lambda_handler(event,context):
     """Sends random tweet from list of potential tweets"""
     send_tweet(random.choice(potential_tweets))
+    return "Tweet posted successfully"
