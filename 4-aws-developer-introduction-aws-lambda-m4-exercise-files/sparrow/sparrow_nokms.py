@@ -5,7 +5,7 @@ from twython import Twython
 
 # Credentials setup
 # Loads in 'creds.json' values as a dictionary
-with open('creds.json') as f:
+with open('creds-plain.json') as f:
     credentials = json.loads(f.read())
 
 # Sets config values from the config file
@@ -20,16 +20,16 @@ twitter = Twython(CONSUMER_KEY, CONSUMER_SECRET,
 
 # Sample random tweets
 potential_tweets = [
-    'This is my first tweet with Sparrow by @fmc_sea - https://github.com/fernando-mc/sparrow',
-    'Wow! Isn\'t Sparrow by @fmcorey just the coolest! https://github.com/fernando-mc/sparrow',
-    'Jeez! Everyone should learn about AWS Lambda and Twitter Bots from @fmc_sea'
+    'This is my first tweet with Sparrow by @veersudhir83 - https://twitter.com/veersudhir83',
+    'Wow! Isn\'t Sparrow by @veersudhir83 just the coolest! https://twitter.com/veersudhir83',
+    'Jeez! Everyone should learn about AWS Lambda and Twitter Bots from @veersudhir83'
 ]
 
 def send_tweet(tweet_text):
     """Sends a tweet to Twitter"""
     twitter.update_status(status = tweet_text)
 
-def handler(event,context):
+def lambda_handler(event,context):
     """Sends random tweet from list of potential tweets"""
     send_tweet(random.choice(potential_tweets))
 
