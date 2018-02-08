@@ -76,7 +76,7 @@ done before working with this repository.
 
     If you have any issues with this step review the documentation:
     Reference:
-    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html)
+    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html
 
 6. Configure the AWS CLI
     Once you have your access keys you can 
