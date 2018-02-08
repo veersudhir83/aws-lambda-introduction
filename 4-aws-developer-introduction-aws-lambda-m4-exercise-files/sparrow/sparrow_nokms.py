@@ -5,7 +5,7 @@ from twython import Twython
 
 # Credentials setup
 # Loads in 'creds.json' values as a dictionary
-with open('creds-plain.json') as f:
+with open('creds.json') as f:
     credentials = json.loads(f.read())
 
 # Sets config values from the config file
@@ -32,6 +32,3 @@ def send_tweet(tweet_text):
 def lambda_handler(event,context):
     """Sends random tweet from list of potential tweets"""
     send_tweet(random.choice(potential_tweets))
-
-
-
