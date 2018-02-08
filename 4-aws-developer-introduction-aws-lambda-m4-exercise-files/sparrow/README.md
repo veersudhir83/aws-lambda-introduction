@@ -117,3 +117,5 @@ done before working with this repository.
     >>> import sparrow_nokms
     >>> sparrow_nokms.send_tweet("My first tweet using Lamdba")
     >>> sparrow_nokms.lambda_handler('','')    
+
+    Then execute setup.sh or windows_setup.bat which will create the package.zip folder that can be uploaded to AWS Lambda function
